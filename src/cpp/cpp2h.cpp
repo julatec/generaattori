@@ -194,7 +194,7 @@ int main(int argc, char **argv) {
                 Members << constexpr_ << const_ << cpp_token_categories
                         << category_of << bpar1(entries.size()) << set_
                         << CBrks {
-                            O << LineInfo;
+                            Members;
                             for (::std::map<::std::string, ::std::string> &entry: entries) {
                                 ArgNL << vlocal(entry[members[column_category].column]);
                             }
