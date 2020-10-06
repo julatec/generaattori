@@ -1,9 +1,8 @@
-#include <tms2/cpp/cu.h>
-#include <tms2/gen/da_identifiers.h>
+#include <generaattori/cpp/cu.h>
 #include <gtest/gtest.h>
 
 using namespace std;
-using namespace tms2;
+using namespace generaattori;
 
 TEST(CompilationUnit, Literals) {
 
@@ -911,7 +910,7 @@ TEST(CompilationUnit, Identation) {
         << "#line " << anchor + 2 << " " << '"' << __FILE__ << '"'
         << "\nint foo;\n"
         << "  #line " << anchor + 4 << " " << '"' << __FILE__ << '"'
-        << "\n  float moo = 7.1;";
+        << "\n  float moo = 7.1F;";
     ASSERT_EQ(result.str(), ss.str());
   }
 
@@ -930,27 +929,8 @@ TEST(CompilationUnit, Blocks) {
         << "#line " << anchor + 2 << " " << '"' << __FILE__ << '"'
         << "\nint foo; {"
         << "\n  #line " << anchor + 4 << " " << '"' << __FILE__ << '"'
-        << "\n  float moo = 7.1;"
+        << "\n  float moo = 7.1F;"
         << "\n}";
     ASSERT_EQ(result.str(), ss.str());
   }
 }
-
-#ifdef TMS2_DA_IDENTIFIERS_H
-TEST(CompilationUnit, DaLiterals) {
-  {
-    stringstream ss, result;
-    SetupCU(ss);
-    const da_index_t da_entry1 = 1;
-    O << da_entry1;
-    ASSERT_EQ("_tms2_da_000000001", ss.str());
-  }
-  {
-    stringstream ss, result;
-    SetupCU(ss);
-    const da_combinations_t da_entry1 = 1;
-    O << da_entry1;
-    ASSERT_EQ("_tms2_da_000000001_comb", ss.str());
-  }
-}
-#endif

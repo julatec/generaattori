@@ -1,22 +1,24 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "bugprone-reserved-identifier"
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "OCDFAInspection"
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #ifndef GENERAATORI_TOKENS_H
 #define GENERAATORI_TOKENS_H
+#line 104 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+#pragma clang diagnostic push
+#line 105 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+#pragma clang diagnostic ignored "-Wunknown-pragmas"
+#line 106 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+#pragma clang diagnostic ignored "bugprone-reserved-identifier"
+#line 107 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+#pragma clang diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #include <iomanip>
 #include <cstddef>
 #include <iostream>
 #include <new>
 #include <typeinfo>
 #include <functional>
-#line 110 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+#line 119 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
 namespace generaattori {
-  #line 111 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+  #line 120 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
   inline namespace cpp {
-    #line 114 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+    #line 123 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
     typedef enum {
       bool_                         = 0,
       char_                         = 1,
@@ -153,416 +155,416 @@ namespace generaattori {
       cl_                           = 132,
       sc_                           = 133
       } cpp_token_t;
-    #line 129 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+    #line 137 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
     typedef enum {
       blank                        = 0,
       punctuation                  = 1,
       word                         = 2
       } cpp_token_categories_t;
-    #line 147 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
-    template <typename CharT,
-    typename _TraitsT>::std::basic_ostream<CharT, _TraitsT>&operator <<(::std::basic_ostream<CharT, _TraitsT>&os,
+    #line 155 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+    template <typename _CharT,
+    typename _TraitsT>::std::basic_ostream<_CharT, _TraitsT>&operator <<(::std::basic_ostream<_CharT, _TraitsT>&os,
     const cpp_token_t&t) {
-      #line 154 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+      #line 162 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
       switch(t) {
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case bool_:
           return os << 'b' << 'o' << 'o' << 'l';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case char_:
           return os << 'c' << 'h' << 'a' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case char16_t_:
           return os << 'c' << 'h' << 'a' << 'r' << '1' << '6' << '_' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case char32_t_:
           return os << 'c' << 'h' << 'a' << 'r' << '3' << '2' << '_' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case float_:
           return os << 'f' << 'l' << 'o' << 'a' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case int_:
           return os << 'i' << 'n' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case short_:
           return os << 's' << 'h' << 'o' << 'r' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case long_:
           return os << 'l' << 'o' << 'n' << 'g';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case signed_:
           return os << 's' << 'i' << 'g' << 'n' << 'e' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case unsigned_:
           return os << 'u' << 'n' << 's' << 'i' << 'g' << 'n' << 'e' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case void_:
           return os << 'v' << 'o' << 'i' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case wchar_t_:
           return os << 'w' << 'c' << 'h' << 'a' << 'r' << '_' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case alignas_:
           return os << 'a' << 'l' << 'i' << 'g' << 'n' << 'a' << 's';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case alignof_:
           return os << 'a' << 'l' << 'i' << 'g' << 'n' << 'o' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case asm_:
           return os << 'a' << 's' << 'm';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case auto_:
           return os << 'a' << 'u' << 't' << 'o';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case break_:
           return os << 'b' << 'r' << 'e' << 'a' << 'k';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case case_:
           return os << 'c' << 'a' << 's' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case catch_:
           return os << 'c' << 'a' << 't' << 'c' << 'h';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case class_:
           return os << 'c' << 'l' << 'a' << 's' << 's';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case const_:
           return os << 'c' << 'o' << 'n' << 's' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case constexpr_:
           return os << 'c' << 'o' << 'n' << 's' << 't' << 'e' << 'x' << 'p' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case const_cast_:
           return os << 'c' << 'o' << 'n' << 's' << 't' << '_' << 'c' << 'a' << 's' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case continue_:
           return os << 'c' << 'o' << 'n' << 't' << 'i' << 'n' << 'u' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case decltype_:
           return os << 'd' << 'e' << 'c' << 'l' << 't' << 'y' << 'p' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case default_:
           return os << 'd' << 'e' << 'f' << 'a' << 'u' << 'l' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case delete_:
           return os << 'd' << 'e' << 'l' << 'e' << 't' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case do_:
           return os << 'd' << 'o';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case double_:
           return os << 'd' << 'o' << 'u' << 'b' << 'l' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case dynamic_cast_:
           return os << 'd' << 'y' << 'n' << 'a' << 'm' << 'i' << 'c' << '_' << 'c' << 'a' << 's' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case else_:
           return os << 'e' << 'l' << 's' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case enum_:
           return os << 'e' << 'n' << 'u' << 'm';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case explicit_:
           return os << 'e' << 'x' << 'p' << 'l' << 'i' << 'c' << 'i' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case export_:
           return os << 'e' << 'x' << 'p' << 'o' << 'r' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case extern_:
           return os << 'e' << 'x' << 't' << 'e' << 'r' << 'n';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case final_:
           return os << 'f' << 'i' << 'n' << 'a' << 'l';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case for_:
           return os << 'f' << 'o' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case friend_:
           return os << 'f' << 'r' << 'i' << 'e' << 'n' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case goto_:
           return os << 'g' << 'o' << 't' << 'o';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case if_:
           return os << 'i' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case inline_:
           return os << 'i' << 'n' << 'l' << 'i' << 'n' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case mutable_:
           return os << 'm' << 'u' << 't' << 'a' << 'b' << 'l' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case namespace_:
           return os << 'n' << 'a' << 'm' << 'e' << 's' << 'p' << 'a' << 'c' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case new_:
           return os << 'n' << 'e' << 'w';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case noexcept_:
           return os << 'n' << 'o' << 'e' << 'x' << 'c' << 'e' << 'p' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case nullptr_:
           return os << 'n' << 'u' << 'l' << 'l' << 'p' << 't' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case operator_:
           return os << 'o' << 'p' << 'e' << 'r' << 'a' << 't' << 'o' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case override_:
           return os << 'o' << 'v' << 'e' << 'r' << 'r' << 'i' << 'd' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case private_:
           return os << 'p' << 'r' << 'i' << 'v' << 'a' << 't' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case protected_:
           return os << 'p' << 'r' << 'o' << 't' << 'e' << 'c' << 't' << 'e' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case public_:
           return os << 'p' << 'u' << 'b' << 'l' << 'i' << 'c';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case register_:
           return os << 'r' << 'e' << 'g' << 'i' << 's' << 't' << 'e' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case reinterpret_cast_:
           return os << 'r' << 'e' << 'i' << 'n' << 't' << 'e' << 'r' << 'p' << 'r' << 'e' << 't' << '_' << 'c' << 'a' << 's' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case return_:
           return os << 'r' << 'e' << 't' << 'u' << 'r' << 'n';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sizeof_:
           return os << 's' << 'i' << 'z' << 'e' << 'o' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case static_:
           return os << 's' << 't' << 'a' << 't' << 'i' << 'c';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case static_assert_:
           return os << 's' << 't' << 'a' << 't' << 'i' << 'c' << '_' << 'a' << 's' << 's' << 'e' << 'r' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case static_cast_:
           return os << 's' << 't' << 'a' << 't' << 'i' << 'c' << '_' << 'c' << 'a' << 's' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case struct_:
           return os << 's' << 't' << 'r' << 'u' << 'c' << 't';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case switch_:
           return os << 's' << 'w' << 'i' << 't' << 'c' << 'h';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case template_:
           return os << 't' << 'e' << 'm' << 'p' << 'l' << 'a' << 't' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case this_:
           return os << 't' << 'h' << 'i' << 's';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case thread_local_:
           return os << 't' << 'h' << 'r' << 'e' << 'a' << 'd' << '_' << 'l' << 'o' << 'c' << 'a' << 'l';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case throw_:
           return os << 't' << 'h' << 'r' << 'o' << 'w';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case try_:
           return os << 't' << 'r' << 'y';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case typedef_:
           return os << 't' << 'y' << 'p' << 'e' << 'd' << 'e' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case typeid_:
           return os << 't' << 'y' << 'p' << 'e' << 'i' << 'd';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case typename_:
           return os << 't' << 'y' << 'p' << 'e' << 'n' << 'a' << 'm' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case union_:
           return os << 'u' << 'n' << 'i' << 'o' << 'n';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case using_:
           return os << 'u' << 's' << 'i' << 'n' << 'g';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case virtual_:
           return os << 'v' << 'i' << 'r' << 't' << 'u' << 'a' << 'l';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case volatile_:
           return os << 'v' << 'o' << 'l' << 'a' << 't' << 'i' << 'l' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case while_:
           return os << 'w' << 'h' << 'i' << 'l' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case set_:
           return os << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sum_eq_:
           return os << '+' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sub_eq_:
           return os << '-' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case mul_eq_:
           return os << '*' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case div_eq_:
           return os << '/' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case mod_eq_:
           return os << '%' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case or_eq_:
           return os << '|' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case and_eq_:
           return os << '&' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case xor_eq_:
           return os << '^' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case rshift_eq_:
           return os << '>' << '>' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case lshift_eq_:
           return os << '<' << '<' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sum_:
           return os << '+';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sub_:
           return os << '-';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case mul_:
           return os << '*';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case div_:
           return os << '/';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case mod_:
           return os << '%';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case bitor_:
           return os << '|';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case bitand_:
           return os << '&';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case rshift_:
           return os << '>' << '>';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case lshift_:
           return os << '<' << '<';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case compl_:
           return os << '~';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case not_:
           return os << '!';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case and_:
           return os << '&' << '&';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case or_:
           return os << '|' << '|';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case xor_:
           return os << '^';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case eq_:
           return os << '=' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case not_eq_:
           return os << '!' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case inc_:
           return os << '+' << '+';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case dec_:
           return os << '-' << '-';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case minus_:
           return os << '-';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case plus_:
           return os << '+';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case iff_:
           return os << '?';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case addressof_:
           return os << '&';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case accessto_:
           return os << '*';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case obj_member_:
           return os << '.';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case ref_member_:
           return os << '-' << '>';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case addressof_obj_member_:
           return os << '.' << '*';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case addressof_ref_member_:
           return os << '-' << '>' << '*';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case gt_:
           return os << '>';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case lt_:
           return os << '<';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case gte_:
           return os << '<' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case lte_:
           return os << '>' << '=';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case IF_:
           return os << '#' << 'i' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case IFDEF_:
           return os << '#' << 'i' << 'f' << 'd' << 'e' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case IFNDEF_:
           return os << '#' << 'i' << 'f' << 'n' << 'd' << 'e' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case ENDIF_:
           return os << '#' << 'e' << 'n' << 'd' << 'i' << 'f';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case DEFINE_:
           return os << '#' << 'd' << 'e' << 'f' << 'i' << 'n' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case INCLUDE_:
           return os << '#' << 'i' << 'n' << 'c' << 'l' << 'u' << 'd' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case WARNING_:
           return os << '#' << 'w' << 'a' << 'r' << 'n' << 'i' << 'n' << 'g';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case ERROR_:
           return os << '#' << 'e' << 'r' << 'r' << 'o' << 'r';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case PRAGMA_:
           return os << '#' << 'p' << 'r' << 'a' << 'g' << 'm' << 'a';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case LINE_:
           return os << '#' << 'l' << 'i' << 'n' << 'e';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case s_:
           return os << ',';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sm_:
           return os << ';';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case cl_:
           return os << ':';
-        #line 159 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 167 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         case sc_:
           return os << ':' << ':';
-        #line 169 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+        #line 177 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
         default:
-          #line 170 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+          #line 178 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
           break;
       }
-      #line 173 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+      #line 181 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
       return os;
     }
-    #line 175 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+    #line 183 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
     constexpr const cpp_token_categories_t category_of [ 134UL] = {
-    #line 178 "/home/julatec/Workspace/generaattori-cpp/src/cpp2h.cpp"
+    #line 186 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
     word,
     word,
     word,
@@ -699,8 +701,6 @@ namespace generaattori {
     punctuation};
   }
 }
+#line 193 "/home/julatec/Workspace/generaattori-cpp/src/cpp/cpp2h.cpp"
+#pragma clang diagnostic pop
 #endif
-#pragma clang diagnostic pop
-#pragma clang diagnostic pop
-#pragma clang diagnostic pop
-

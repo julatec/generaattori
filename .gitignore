@@ -41,3 +41,4 @@
 *.toc
 .Rbuildignore
 cmake-build-debug
+lib/googletest
